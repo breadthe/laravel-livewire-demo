@@ -46,10 +46,10 @@
                     {{ $widget->name }}
 
                     @if($tags = $widget->tags)
-                        <div class="-mx-1">
+                        <div class="-mx-1 text-right">
                             @foreach($tags as $tag)
                                 <small
-                                    class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-1 shadow"
+                                    class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow"
                                 >
                                     {{ $tag->name }}
                                 </small>

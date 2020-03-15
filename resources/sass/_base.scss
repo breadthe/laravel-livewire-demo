@@ -14,3 +14,13 @@ a {
         @apply text-black;
     }
 }
+
+h1, h1 > * {
+    @apply font-bold;
+    @apply text-3xl;
+}
+
+h2, h2 > *  {
+    @apply font-bold;
+    @apply text-2xl;
+}
