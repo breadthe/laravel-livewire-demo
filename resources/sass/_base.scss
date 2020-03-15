@@ -1,0 +1,16 @@
+body {
+    @apply bg-gray-100;
+    @apply leading-normal;
+    @apply font-light;
+    @apply font-mono;
+    @apply text-base;
+    @apply text-gray-700;
+}
+
+a {
+    @apply text-gray-700;
+
+    &:hover {
+        @apply text-black;
+    }
+}
