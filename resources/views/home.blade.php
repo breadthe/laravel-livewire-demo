@@ -7,5 +7,7 @@
         @else
             @include('welcome')
         @endauth
+
+        @livewire('widgets')
     </section>
 @endsection

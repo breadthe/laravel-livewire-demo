@@ -22,6 +22,8 @@
     @include('layouts.favicon')
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.1.2/dist/alpine.js" defer></script>
+
+    @livewireStyles
 </head>
 <body>
     <div id="app" class="relative" x-data="{'menuIsOpen': false}">
@@ -37,5 +39,7 @@
 
         @include('layouts.footer')
     </div>
+
+    @livewireScripts
 </body>
 </html>
