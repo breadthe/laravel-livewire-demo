@@ -14,3 +14,6 @@
 
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
+
+// AlpineJS
+[x-cloak] { display: none; }
