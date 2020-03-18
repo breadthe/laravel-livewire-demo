@@ -18,6 +18,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', fn() => redirect('/'));
 
 Route::get('/tags', fn () => view('tags'))->name('tags');
+Route::get('/edit-in-place', fn () => view('edit-in-place'))->name('edit-in-place');
 
 Auth::routes();
 

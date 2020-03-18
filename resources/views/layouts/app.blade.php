@@ -40,6 +40,8 @@
         @include('layouts.footer')
     </div>
 
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.1.2/dist/alpine.js" defer></script>
+
     @livewireScripts
 </body>
 </html>
