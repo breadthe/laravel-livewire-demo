@@ -4,7 +4,7 @@
     <div class="flex items-center justify-between flex-1">
         <!-- logo -->
         <a class="flex items-center p-2" href="{{ url('/') }}">
-            <img src="{{ asset('favicons/favicon-96x96.png') }}" alt="Icon" class="h-8 mr-2">
+            <img src="{{ asset('favicons/favicon-32x32.png') }}" alt="Icon" class="h-8 mr-2">
             {{ config('app.name', 'Laravel') }}
         </a>
 

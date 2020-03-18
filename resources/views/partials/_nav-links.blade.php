@@ -1,14 +1,14 @@
 <a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('tags') }}">
     Tags
 </a>
-<a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ url('/') }}">
-    Link 2
+<a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('edit-in-place') }}">
+    Edit in place
 </a>
 
 @guest
-    <a class="ml-2 p-2 underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+    <a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('login') }}">{{ __('Login') }}</a>
     @if (Route::has('register'))
-        <a class="ml-2 p-2 underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+        <a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('register') }}">{{ __('Register') }}</a>
     @endif
 @else
     <!-- desktop -->
