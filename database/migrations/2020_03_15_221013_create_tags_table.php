@@ -10,7 +10,8 @@ class CreateTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 100)->unique();
+            $table->string('short_id', 64)->nullable()->unique();
+            $table->string('name', 100)->nullable()->unique();
             $table->timestamps();
         });
     }
