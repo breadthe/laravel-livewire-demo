@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Widget::class, function (Faker $faker) {
     return [
-        'name' => $faker->sentence(3),
+        'name' => $faker->catchPhrase,
     ];
 });

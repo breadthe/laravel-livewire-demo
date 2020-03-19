@@ -38,12 +38,8 @@
             <div class="mt-4">{{ $total }} results</div>
             <hr class="border-t">
             @foreach($widgets as $widget)
-                {{--<div wire:poll.1s  wire:transition.fade>{{ $widget->name }}</div>--}}
-                <div
-                    wire:transition.fade
-                    class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100"
-                >
-                    {{ $widget->name }}
+                <div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100">
+                    @livewire('edit-name', compact('widget'), key($widget->id))
 
                     @if($tags = $widget->tags)
                         <div class="-mx-1 text-right">

@@ -10,7 +10,8 @@ class CreateWidgetsTable extends Migration
     {
         Schema::create('widgets', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 100)->unique();
+            $table->string('short_id', 64)->nullable()->unique();
+            $table->string('name', 100)->nullable();
             $table->timestamps();
         });
 

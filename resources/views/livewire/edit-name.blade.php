@@ -2,7 +2,7 @@
     x-data="
         {
              isEditing: false,
-             isTag: '{{ $isTag }}',
+             isName: '{{ $isName }}',
              focus: function() {
                 const textInput = this.$refs.textInput;
                 textInput.focus();
@@ -17,10 +17,9 @@
         x-show=!isEditing
     >
         <span
-            class="border-b border-dotted border-blue-600"
-            x-bind:class="{ 'font-bold': isTag }"
+            x-bind:class="{ 'font-bold': isName }"
             x-on:click="isEditing = true; $nextTick(() => focus())"
-        >{{ $origTag }}</span>
+        >{{ $origName }}</span>
     </div>
     <div x-show=isEditing class="flex flex-col">
         <form class="flex" wire:submit.prevent="save">
@@ -29,7 +28,7 @@
                 class="px-2 border border-gray-400 text-lg shadow-inner"
                 placeholder="100 characters max."
                 x-ref="textInput"
-                wire:model.lazy="newTag"
+                wire:model.lazy="newName"
                 x-on:keydown.enter="isEditing = false"
                 x-on:keydown.escape="isEditing = false"
             >
@@ -42,6 +41,5 @@
             >✓</button>
         </form>
         <small class="text-xs">Enter to save, Esc to cancel</small>
-        @error('newTag') <span class="text-red-500">{{ $message }}</span> @enderror
     </div>
 </div>
