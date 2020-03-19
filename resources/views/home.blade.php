@@ -12,7 +12,6 @@
             <h1 class="mb-8">Livewire Demos</h1>
 
             <h2 class="mb-4"><a href="{{ route('tags') }}" class="border-b border-gray-700 border-dashed">Tag filtering & search</a></h2>
-            <h2 class="mb-4"><a href="{{ route('edit-in-place') }}" class="border-b border-gray-700 border-dashed">Edit in place</a></h2>
         </div>
     </section>
 @endsection

@@ -1,9 +1,6 @@
 <a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('tags') }}">
     Tags
 </a>
-<a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('edit-in-place') }}">
-    Edit in place
-</a>
 
 @guest
     <a class="ml-2 p-2 underline text-gray-100 sm:text-gray-700 hover:bg-gray-300 hover:text-black" href="{{ route('login') }}">{{ __('Login') }}</a>
