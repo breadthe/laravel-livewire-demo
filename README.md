@@ -16,6 +16,10 @@ A small demo of realtime keyword searching and multi-facet filtering on a datase
 
 ![Filter by multiple tags and search string | Laravel Livewire Demo](public/img/laravel-livewire-demo-3.png)
 
+### Inline/in place editing
+
+![Inline/in place editing | Laravel Livewire Demo](public/img/laravel-livewire-demo-4.png)
+
 ## Installation
 
 Clone, `composer install`, `yarn install`, configure `.env` and your DB connection.
