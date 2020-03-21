@@ -36,23 +36,22 @@
     <div class="">
         @if($total = $widgets->count())
             <div class="mt-4">{{ $total }} results</div>
-            <hr class="border-t">
-            @foreach($widgets as $widget)
-                <div class="flex items-center justify-between p-2 -mx-2 hover:bg-gray-100">
-                    @livewire('edit-name', compact('widget'), key($widget->id))
+            <hr class="border-t mb-4">
 
-                    @if($tags = $widget->tags)
-                        <div class="-mx-1 text-right">
-                            @foreach($tags as $tag)
-                                <small
-                                    class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow"
-                                >
-                                    {{ $tag->name }}
-                                </small>
-                            @endforeach
-                        </div>
-                    @endif
-                </div>
+            @foreach($widgets as $widget)
+                @livewire('edit-name', compact('widget'), key($widget->id))
+
+                @if($tags = $widget->tags)
+                    <div class="mb-4 -mt-1 -mx-2">
+                        @foreach($tags as $tag)
+                            <small
+                                class="mx-1 {{ in_array($tag->id, $filters) ? 'bg-blue-200 text-blue-900' : 'bg-gray-200 text-gray-900' }} rounded-full px-2 shadow"
+                            >
+                                {{ $tag->name }}
+                            </small>
+                        @endforeach
+                    </div>
+                @endif
             @endforeach
         @else
             no results
