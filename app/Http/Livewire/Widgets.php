@@ -4,27 +4,48 @@ namespace App\Http\Livewire;
 
 use App\Widget;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Widgets extends Component
 {
+    use WithPagination;
+
     protected $listeners = ['filterByTag' => 'filterByTag'];
 
     public $search;
     public $filters = [];
+    public $perPage = 10;
+    public $sort = 'name|asc';
 
     public function render()
     {
         $widgets = Widget::with('tags', 'tags.widgets');
 
+        //Get tag count without being affect by pagination
+        $uniqueTags = $this->getUniqueTags($widgets->get());
+
         $this->applySearchFilter($widgets);
 
         $this->applyTagFilter($widgets);
 
-        $widgets = $widgets->get();
-
-        $uniqueTags = $this->getUniqueTags($widgets);
+        $widgets = $widgets->orderBy($this->sortByColumn(), $this->sortDirection())
+            ->paginate($this->perPage);
 
         return view('livewire.widgets')->with(compact('widgets', 'uniqueTags'));
+    }
+
+    public function sortByColumn()
+    {
+        $sort = explode("|", $this->sort);
+
+        return $sort[0] ?? 'name';
+    }
+
+    public function sortDirection()
+    {
+        $sort = explode("|", $this->sort) ?? 'asc';
+
+        return $sort[1] ?? 'asc';
     }
 
     public function filterByTag($tag)

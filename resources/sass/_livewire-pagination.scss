@@ -1,0 +1,31 @@
+/* purgecss start ignore */
+ul.pagination {
+  @apply flex justify-center;
+}
+.page-link {
+  @apply inline-block bg-blue-100 text-blue-800 py-2 px-4 text-sm text-center;
+}
+.page-link:last-child {
+  @apply border-0;
+}
+.page-link:hover {
+  @apply bg-blue-700 text-white border-blue-500;
+}
+.page-item.active .page-link {
+  @apply bg-blue-500 text-white;
+}
+.page-item.disabled .page-link {
+  @apply text-gray-500 bg-gray-100;
+}
+.d-none {
+  @apply hidden;
+}
+@screen md {
+  .d-md-none {
+    @apply hidden;
+  }
+  .d-md-block {
+    @apply block;
+  }
+}
+/* purgecss end ignore */
