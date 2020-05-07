@@ -4,21 +4,9 @@
 
 A small demo of realtime keyword searching and multi-facet filtering on a dataset tagged with a random assortment of tags. All done with [Livewire](https://livewire-framework.com/), no JS required.
 
-### All records
+### My fork added pagination and sorting
 
-![All records | Laravel Livewire Demo](public/img/laravel-livewire-demo-1.png)
-
-### Filter by multiple tags
-
-![Filter by multiple tags | Laravel Livewire Demo](public/img/laravel-livewire-demo-2.png)
-
-### Filter by multiple tags and search string
-
-![Filter by multiple tags and search string | Laravel Livewire Demo](public/img/laravel-livewire-demo-3.png)
-
-### Inline/in place editing
-
-![Inline/in place editing | Laravel Livewire Demo](public/img/laravel-livewire-demo-4.png)
+![Sorting | Laravel Livewire Demo](/public/img/laravel-livewire-demo-with-sorting-and-pagination.png)
 
 ## Installation
 
