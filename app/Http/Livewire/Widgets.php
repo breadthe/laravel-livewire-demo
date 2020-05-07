@@ -17,6 +17,14 @@ class Widgets extends Component
     public $perPage = 10;
     public $sort = 'name|asc';
 
+    /*
+     * Reset pagination when doing a search
+     */
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
         $widgets = Widget::with('tags', 'tags.widgets');
@@ -56,6 +64,9 @@ class Widgets extends Component
             unset($this->filters[$ix]);
         } else {
             $this->filters[] = $tag;
+
+            //Reset pagination, otherwise filter won't work
+            $this->resetPage();
         }
     }
 

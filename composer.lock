@@ -494,6 +494,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -540,6 +541,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -972,16 +974,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v1.0.8",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "50ffdc3849b4652012cfb80af5ae243a615b225b"
+                "reference": "a6b43843c89304fe96f9f98fcb3f1e2660b0deae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/50ffdc3849b4652012cfb80af5ae243a615b225b",
-                "reference": "50ffdc3849b4652012cfb80af5ae243a615b225b",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/a6b43843c89304fe96f9f98fcb3f1e2660b0deae",
+                "reference": "a6b43843c89304fe96f9f98fcb3f1e2660b0deae",
                 "shasum": ""
             },
             "require": {
@@ -1025,7 +1027,7 @@
                 }
             ],
             "description": "A front-end framework for Laravel.",
-            "time": "2020-03-18T00:28:47+00:00"
+            "time": "2020-04-27T13:47:28+00:00"
         },
         {
             "name": "monolog/monolog",
